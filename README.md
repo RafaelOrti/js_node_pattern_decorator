@@ -1,10 +1,36 @@
-# Proyecto Decorator en Node.js
+# Decorator pattern in Node.js
 
-Este proyecto implementa el patrón de diseño Decorator en Node.js para agregar funcionalidades adicionales a objetos dinámicamente.
+This project implements the Decorator design pattern in Node.js to add additional functionality to objects dynamically.
 
-## Estructura de Carpetas
+The Decorator pattern is a structural design pattern that allows behavior to be added to individual objects dynamically, without modifying their code. It is used to extend the functionality of an object at runtime by wrapping it with additional layers of objects, called decorators.
 
-La estructura de carpetas del proyecto es la siguiente:
+The main idea behind the Decorator pattern is to create a set of decorator classes that provide additional features or behavior to the original object. These decorators implement the same interface as the original object, allowing them to be used interchangeably. The decorators contain an instance variable that points to the object they are decorating.
+
+Here's how the Decorator pattern works:
+
+1. Define the Component Interface: This is the common interface that all the objects, both the concrete components, and the decorators, should implement. It defines the methods that the decorators and components will use.
+
+2. Create Concrete Component: Concrete Components are the original objects that we want to extend or modify. They implement the Component interface and provide the core functionality.
+
+3. Create the Decorator: The Decorator class also implements the Component interface and contains a reference to the Component it is decorating. Decorators have the same interface as the components they decorate.
+
+4. Create Concrete Decorators: Concrete Decorators are the additional features that can be added to the original components. They extend the functionality of the components by adding new behavior.
+
+5. Using Decorators: The decorators can be stacked on top of each other, allowing you to combine various features dynamically and create flexible configurations.
+
+Benefits of using the Decorator pattern include:
+
+1. Flexibility: Decorators allow you to add or remove responsibilities to objects at runtime, providing greater flexibility compared to using inheritance.
+
+2. Single Responsibility Principle: By separating the responsibilities into individual decorators, you keep the classes small and focused on specific functionalities.
+
+3. Reusability: The decorators can be reused and combined in various ways, enabling the creation of complex configurations without the need to create multiple subclasses.
+
+4. Overall, the Decorator pattern promotes the "Open/Closed Principle," which states that classes should be open for extension but closed for modification. It allows you to add new behaviors or features to objects without altering their existing code, making it a powerful and flexible design pattern.
+
+## Folder Structure
+
+The project folder structure is as follows:
 ```
 project/
 |-- src/
@@ -38,40 +64,40 @@ project/
 
 ```
 
-## Instalación
+## Facility
 
-Para instalar el proyecto y sus dependencias, sigue estos pasos:
+To install the project and its dependencies, follow these steps:
 
-1. Clona el repositorio: `git clone https://github.com/tu-usuario/proyecto-decorator.git`
-2. Navega al directorio del proyecto: `cd proyecto-decorator`
-3. Instala las dependencias: `npm install`
+1. Clone the repository: `git clone https://github.com/your-user/decorator-project.git`
+2. Navigate to the project directory: `cd project-decorator`
+3. Install the dependencies: `npm install`
 
-## Uso
+## Use
 
-Para ejecutar la aplicación y ver cómo funciona el patrón Decorator, puedes usar el siguiente comando:
+To run the app and see how the Decorator pattern works, you can use the following command:
 ```
 npm start
 ```
 
-Esto ejecutará el archivo `main.js`, que demuestra cómo se pueden utilizar los objetos originales y los decoradores en conjunto para agregar funcionalidades dinámicamente.
+This will run the `main.js` file, which demonstrates how the original objects and decorators can be used together to add functionality dynamically.
 
-## Pruebas
+## Evidence
 
-El proyecto incluye pruebas unitarias para las clases `ConcreteComponent`, `DecoratorA` y `DecoratorB`. Para ejecutar las pruebas, utiliza el siguiente comando:
+The project includes unit tests for the `ConcreteComponent`, `DecoratorA`, and `DecoratorB` classes. To run the tests, use the following command:
 ```
 npm test
 ```
 
-## Contribución
+## Contribution
 
-Si deseas contribuir al proyecto, sigue estos pasos:
+If you want to contribute to the project, follow these steps:
 
-1. Haz un fork del repositorio.
-2. Crea una nueva rama para tu contribución: `git checkout -b mi-contribucion`
-3. Realiza tus cambios y commits.
-4. Envía tus cambios al repositorio remoto: `git push origin mi-contribucion`
-5. Crea un pull request para que tus cambios sean revisados y fusionados.
+1. Fork the repository.
+2. Create a new branch for your contribution: `git checkout -b my-contribution`
+3. Make your changes and commits.
+4. Push your changes to the remote repository: `git push origin my-contribution`
+5. Create a pull request for your changes to be reviewed and merged.
 
-## Licencia
+## License
 
-Este proyecto está bajo la Licencia [MIT](LICENSE).
+This project is licensed under the [MIT](LICENSE) License.
