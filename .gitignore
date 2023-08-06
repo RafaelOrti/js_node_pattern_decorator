@@ -15,7 +15,6 @@ npm-debug.log
 yarn.lock
 
 # Ignorar archivos de compilación y construcción
-*.js
 *.map
 
 # Ignorar archivos y carpetas de pruebas y resultados de pruebas
