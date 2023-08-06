@@ -1,0 +1,28 @@
+# Archivo .gitignore
+
+# Ignorar carpetas generadas por Node.js/npm
+node_modules/
+dist/
+
+# Ignorar archivos generados por el editor de código
+.vscode/
+*.code-workspace
+*.log
+
+# Ignorar archivos de dependencias de desarrollo
+package-lock.json
+npm-debug.log
+yarn.lock
+
+# Ignorar archivos de compilación y construcción
+*.js
+*.map
+
+# Ignorar archivos y carpetas de pruebas y resultados de pruebas
+coverage/
+.nyc_output/
+
+# Ignorar archivos y carpetas específicos del proyecto
+.env
+.DS_Store
+Thumbs.db
